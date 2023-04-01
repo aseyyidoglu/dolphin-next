@@ -2,7 +2,14 @@
 
 Dolphin is a serverless web application built on [Next.js](https://nextjs.org/) and [AWS](https://aws.amazon.com/).
 
-To run the development server:
+Source code does not have any node packages.
+Install node packages:
+
+```bash
+npm install
+```
+
+Run development server:
 ```bash
 npm run dev
 # or
