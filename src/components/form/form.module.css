@@ -1,0 +1,62 @@
+.form_button {
+  max-width: 100px;
+  width: 100px;
+}
+
+.error {
+  display: block;
+  width: auto;
+  color: var(--color-interactive-critical);
+  background-color: var(--color-surface-critical);
+  border-radius: 4px;
+  margin: 6px 0 0 0;
+  padding: 0 0 0 6px;
+  font-size: smaller;
+}
+
+.success {
+  display: block;
+  width: auto;
+  color: var(--color-interactive-success);
+  background-color: var(--color-surface-success);
+  border-radius: 4px;
+  margin: 6px 0 0 0;
+  padding: 0 0 0 6px;
+  font-size: smaller;
+}
+
+.warning {
+  display: block;
+  width: auto;
+  color: var(--color-interactive-warning);
+  background-color: var(--color-surface-warning);
+  border-radius: 4px;
+  margin: 6px 0 0 0;
+  padding: 0 0 0 6px;
+  font-size: smaller;
+}
+
+/* these form input types must be addded into form component
+button
+date
+datetime-local
+password
+email
+reset
+search
+submit
+tel
+text
+time
+file
+checkbox
+hidden
+image
+month
+number
+radio
+range
+url
+week
+color
+*/

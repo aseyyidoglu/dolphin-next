@@ -1,0 +1,408 @@
+:root,
+  :root.light {
+  /* Font */
+  --font-sans:          none;
+  --font-serif:         none;
+  --font-mono:          none;
+  --font-heading:       'Inter', system-ui, -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-text:          'Inter', system-ui, -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* Typography */
+  --line-height:        1.7;
+  --letter-spacing:     0;
+  --word-spacing:       0;
+
+  /* Colors */
+  --color-background:                     hsl(210, 30%, 10%)  ; /* Page background */
+  --color-surface:                        hsl(210, 10%, 15%)  ; /* Containers, forms, tables, navigation backgrounds */
+  --color-text:                           hsl(0, 0%, 90%)     ; /* Texts */
+  --color-text-highlight:                 hsl(220, 100%, 60%) ; /* */
+  --color-link:                           hsl(170, 40%, 60%)  ; /* Link elements in paragraph */
+  --color-link-hover:                     hsl(170, 80%, 50%)  ; /* Link elements in paragraph */
+  
+  --color-code:                           hsl(0, 0%, 90%)     ; /* Code text over code background */
+  --color-code-background:                hsla(210, 11%, 5%, 0.714)  ; /* Code background */
+  
+  --color-action:                         hsl(170, 80%, 50%)  ; /* Default action */
+  --color-action-primary:                 hsl(170, 100%, 25%)   ; /* Primary action: buttons */
+  --color-action-primary-hover:           hsl(170, 100%, 35%)   ; /* Primary action: buttons */
+  --color-action-secondary:               hsl(240, 20%, 70%)  ; /* Secondary action: buttons */
+
+  --color-border:                         hsla(0, 0%, 44%, 0.8); /* Border */
+  --color-divider:                        hsl(0, 0%, 95%); /* Divider */
+
+  --color-interactive-text:               hsl(0, 0%, 93%); /* Text in interactive elements, e.g. button */
+  --color-interactive-critical:           hsl(15, 100%, 40%); /* Critical text */
+  --color-surface-critical:               hsl(15, 100%, 90%); /* Critical surface for critical text */
+  --color-interactive-warning:            hsl(48, 100%, 50%); /* Warning text */
+  --color-surface-warning:                hsl(48, 100%, 90%); /* Warning surface for warning text */
+  --color-interactive-success:            hsl(100, 100%, 30%); /* Success text */
+  --color-surface-success:                hsl(100, 100%, 90%); /* Success surface for success text */
+  
+  --color-d-surface-1:        none;
+  --color-d-icon-1:           none;
+  --color-d-text-1:           none;
+  --color-d-surface-2:        none;
+  --color-d-icon-2:           none;
+  --color-d-text-2:           none;
+  --color-d-surface-3:        none;
+  --color-d-icon-3:           none;
+  --color-d-text-3:           none;
+
+  --brightness-lighter:       1.2;
+  --brightness-darker:        0.8;
+  --transition:               0.25s;
+
+  /* Shape */
+
+  /* Spacing */
+  --space-0:            0rem;
+  --space-1:            .25rem;
+  --space-2:            .5rem;
+  --space-3:            .75rem;
+  --space-4:            1rem;
+  --space-5:            1.25rem;
+  --space-6:            1.5rem;
+  --space-7:            1.75rem;
+  --space-8:            2rem;
+  --space-10:           2.5rem;
+  --space-12:           3rem;
+  --space-16:           4rem;
+  --space-20:           5rem;
+  --space-24:           6rem;
+  --space-28:           7rem;
+  --space-32:           8rem;
+
+  --p-space-before:     0;
+  --p-space-after:      0;
+  --list-space-before:  0;
+  --list-space-after:   0;
+
+  /* Depth */
+
+  /* Shadow */
+
+  /* Motion */
+
+  /* Breakpoints */
+
+  /* Z-Index */
+
+  /* Defaults */
+  font-size:        var(--font-size);
+  font-family:      var(--font-text);
+  line-height:      var(--line-height);
+  letter-spacing:   var(--letter-spacing);
+  word-spacing:     var(--word-spacing);
+  background-color: var(--color-background);
+  margin:           0;
+  padding:          0;
+}
+:root,
+:root.dark {
+    /* Colors */
+  --color-background:                     hsl(0, 0%, 90%)  ; /* Page background */
+  --color-surface:                        hsl(0, 0%, 80%)  ; /* Containers, forms, tables, navigation backgrounds */
+  --color-text:                           hsl(210, 30%, 10%)     ; /* Texts */
+}
+
+/* Defaults */
+*,
+body {
+  margin: 0;
+  padding: 0;
+  border-radius: 0px;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+header,
+main,
+footer {
+  display: block;
+  margin: 0; 
+  padding: 0 2rem;
+}
+
+/* Spacing */
+footer { 
+  margin: var(--space-8) var(--space-0) var(--space-16) var(--space-0)
+}
+
+main div,
+main form {
+  padding: var(--space-4) var(--space-0);
+}
+
+h1,h2,h3,h4,h5,h6,
+p,pre,article,aside,details {
+  margin-top:     var(--space-4);
+  margin-bottom:  var(--space-1);
+}
+
+main ul, ol {
+  padding: var(--space-2) var(--space-0);
+}
+main ul > li,
+main ol > li {
+  margin: 0 0 0 var(--space-6);
+}
+
+hr {
+  margin: var(--space-4) 0
+}
+
+/* Typography */
+/* -------------------------------- */
+h1 {font-size: 2.25rem; }
+h2 {font-size: 2.00rem; }
+h3 {font-size: 1.75rem; }
+h4 {font-size: 1.50rem; }
+h5 {font-size: 1.25rem; }
+h6 {font-size: 1rem;    }
+code {
+  padding: .2rem .5rem;
+  margin: 0 0;
+  font-size: 90%;
+  white-space: nowrap;
+  color: var(--color-code);
+  background: var(--color-code-background);
+  border: 1px solid var(--color-border);
+  border-radius: 5px; }
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; 
+}
+
+/* Links */
+/* -------------------------------- */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  padding: 0 0 0px 0;
+  border-bottom: 1px solid;
+  border-radius: 0;
+  transition: .1s;
+}
+a:hover { 
+  color: var(--color-link-hover);
+  border-bottom: none;
+  transition: .1s;
+}
+
+/* Navigation Links */
+/* -------------------------------- */
+nav a {
+  color:              inherit;
+  border-bottom:      none;
+  border-radius:      3px;
+  list-style-type:    none;
+  padding:            var(--space-2) var(--space-2);
+}
+nav a:hover { 
+  color:              var(--color-interactive-text);
+  text-decoration:    none;
+  background-color:   var(--color-surface);
+}
+
+
+/* Forms */
+/* -------------------------------- */
+form {
+  display: block;
+  width: 100%;
+  border-radius: .5rem;
+}
+form fieldset > *,
+form fieldset div > * {
+  background-color: var(--color-surface);
+}
+form fieldset {
+  margin: 0 0;
+  padding: 0 0 1.5rem 0;
+  border: 1px solid var(--color-border);
+  border-radius: inherit;
+  background-color: var(--color-surface); 
+}
+form legend {
+  display: none;
+}
+form div {
+  margin: .5rem .5rem;
+  padding: .5rem 1rem;
+}
+form label {
+  display: block;
+  font-size: 90%;
+  width: 100%;
+  padding: 0 0 4px 0;
+}
+form input,
+form textarea {
+  box-sizing:     border-box;
+  display:        flex;
+  height:         32px;
+  min-width:      250px;
+  width:          100%;
+  border:         1px solid var(--color-border);
+  border-radius:  inherit;
+  outline:        .5rem solid gray;
+  outline:        none; 
+  padding:        8px;
+  transition:     var(--transition);
+}
+form textarea {
+  padding:        8px;
+  min-height:     100px;
+  resize:         vertical;
+  box-sizing:     border-box;
+  transition:     var(--transition);
+}
+form input:focus,
+form textarea:focus {
+  background-color:       var(--color-surface);
+  filter:                 brightness(var(--brightness-lighter));
+  outline:                1px solid var(--color-border) !important; 
+  transition:             filter var(--transition);
+}
+
+
+/* Tables */
+/* -------------------------------- */
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(color-border); }
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+
+/* Helpers */
+/* -------------------------------- */
+
+/* Classes */
+.container {
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 1rem;
+  background-color: var(--color-surface)
+}
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: left; }
+.pagination-container button {
+  display: inline;
+  border: 0;
+  color: black;
+  background-color: white;
+  min-width: 50px;
+  width: 50px;
+  min-height: 25px;
+  height:25px}
+.pagination-container button:hover {
+  font-weight: bolder;
+  color: var(--color-a1);
+  border-bottom: 2px solid var(--color-a1);
+  transition: 0s; }
+
+/* Components */
+/* -------------------------------- */
+#body-bg {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  background: rgb(14, 14, 14);
+  width: 100%; height: 100%;
+  left:0; top:0;
+  z-index: 100;}
+#header {
+  display: flex;
+  position: sticky;
+  width: inherit;
+  top: 0;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  border-radius: 0; }
+
+#topbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: .4rem 0rem }
+#topbuttons {
+  display: flex;
+  right:0;
+  padding: inherit;}
+#topbuttons button {
+  width: 100px;
+}
+
+#mobile-navigation { margin: 0; padding: 0}
+#topnav { display: none; padding: inherit; }
+#sidenav {
+  padding: 0 2rem }
+#topnav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 18px; }
+#sidenav, #sidenav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none; 
+  gap: 16px; }
+
+#main { 
+  border: 1px solid #ddd;
+  padding: 16px;
+  width: 100%; }
+
+#hero .button {
+  font-size: large;
+  border: 0;
+  min-height: 40px;
+  min-width: 100px;
+  width: 150px;
+  max-height: 50px;
+  height: 50px;}
+#hero .button:hover {
+  background-color: var(--color-secondary);
+  transition: .27s;}
+#hero .button:hover::after {
+  transition: .27s;}
+
+#blog-wrapper {
+  border: 1px solid rgb(212, 212, 212); }
+
+/* Media Queries */
+@media (min-width: 480px) {
+  header, main, footer { padding: 0 4rem; } }
+@media (min-width: 770px) {
+  header, main, footer { padding: 0 6rem; }
+  #topnav { display: flex; }
+  #mobilebutton { display: none; }
+  #navbar-spacing { display: none }
+  #topnav {position: relative;} 
+  #topnav { visibility: visible; }
+  #main { width: 80%; }
+  #main > div { margin-bottom: 48px; margin-top:0} }
+@media (min-width: 910px) {
+  header, main, footer { padding: 0 6rem; }
+}
+@media (min-width: 1100px) {
+  header, main, footer { padding: 0 8rem; }
+}
+@media (min-width: 1200px) {
+  header, main, footer { padding: 0 8rem; }
+}

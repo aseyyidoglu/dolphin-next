@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  position:fixed;
+  background-color: var(--color-background);
+  width: 300px; height: 100vh; top:0;
+  border-right: 1px solid var(--color-border);
+  left: -400px;
+  transition: .3s; 
+  z-index: 200; }
+.menu__open {
+  display: flex;
+  flex-direction: column;
+  position:fixed;
+  background-color: var(--color-background);
+  width: 300px; height: 100vh; top:0;
+  border-right: 1px solid var(--color-background);
+  left: 0px;
+  transition: .3s; 
+  z-index: 200; }
+.menu_close_button {
+  display: flex;
+  padding-top:1rem;
+}
+.menu_close_button > button {
+  margin-left: auto;
+  margin-right: 18px;
+}

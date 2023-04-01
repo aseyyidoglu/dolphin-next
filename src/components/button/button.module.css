@@ -1,0 +1,26 @@
+.button {
+  display: inline;
+  border: 0;
+  width: 100%;
+  min-height: 2.5rem;
+  min-width: 4.5rem;
+  max-height: 3rem;
+  font-weight: bold;
+  color: rgb(245, 244, 244);
+  background-color: var(--color-action-primary);
+  transition: var(--transition);
+  color: var(--color-interactive-text);
+}
+.button:hover {
+  background-color: var(--color-action-primary-hover);
+  transition: var(--transition);
+}
+
+.primary {
+  border-radius: 5px;
+}
+.secondary {
+  background-color: var(--color-action-secondary)}
+.submit {
+
+}

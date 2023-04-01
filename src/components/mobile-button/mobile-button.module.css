@@ -1,0 +1,51 @@
+.menu_button {
+  display: flex;
+  width: auto;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 35px;
+  height: 25px;
+  margin: auto 0;
+}
+
+.line1, .line2, .line3 {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: .2rem;
+  transition: var(--transition);
+}
+
+.line1_open {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: .2rem;
+  transform: translate(0px, 14px) rotate(-45deg);
+  transition: var(--transition)
+}
+.line2_open {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: .2rem;
+  opacity: 0;
+  transition: var(--transition)
+}
+.line3_open { 
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: .2rem;
+  transform: translate(0, -9px) rotate(45deg);
+  transition: var(--transition)
+}
