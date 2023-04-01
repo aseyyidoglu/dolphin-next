@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
+
 import Header from '@/components/parts/header'
 import Footer from '@/components/parts/footer'
 import Button from '@/components/button/button'
@@ -68,7 +68,6 @@ export default function Home() {
           </Form>
         </div>
         <div id="right-sidebar">
-
         </div>
       </main>
       <Footer />

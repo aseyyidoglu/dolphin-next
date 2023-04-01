@@ -1,5 +1,4 @@
-:root,
-  :root.light {
+:root {
   /* Font */
   --font-sans:          none;
   --font-serif:         none;
@@ -16,6 +15,7 @@
   --color-background:                     hsl(210, 30%, 10%)  ; /* Page background */
   --color-surface:                        hsl(210, 10%, 15%)  ; /* Containers, forms, tables, navigation backgrounds */
   --color-text:                           hsl(0, 0%, 90%)     ; /* Texts */
+
   --color-text-highlight:                 hsl(220, 100%, 60%) ; /* */
   --color-link:                           hsl(170, 40%, 60%)  ; /* Link elements in paragraph */
   --color-link-hover:                     hsl(170, 80%, 50%)  ; /* Link elements in paragraph */
@@ -48,10 +48,6 @@
   --color-d-surface-3:        none;
   --color-d-icon-3:           none;
   --color-d-text-3:           none;
-
-  --brightness-lighter:       1.2;
-  --brightness-darker:        0.8;
-  --transition:               0.25s;
 
   /* Shape */
 
@@ -97,16 +93,26 @@
   background-color: var(--color-background);
   margin:           0;
   padding:          0;
-}
-:root,
-:root.dark {
-    /* Colors */
-  --color-background:                     hsl(0, 0%, 90%)  ; /* Page background */
-  --color-surface:                        hsl(0, 0%, 80%)  ; /* Containers, forms, tables, navigation backgrounds */
-  --color-text:                           hsl(210, 30%, 10%)     ; /* Texts */
+
+  --brightness-lighter:       1.2;
+  --brightness-darker:        0.8;
+  --transition:               0.25s;
 }
 
-/* Defaults */
+/* Light theme */
+html[data-theme='light'] {
+  --color-background:               hsl(0, 0%, 90%)  ; /* Page background */
+  --color-surface:                  hsl(0, 0%, 80%)  ; /* Containers, forms, tables, navigation backgrounds */
+  --color-text:                     hsl(210, 30%, 10%)     ; /* Texts */
+}
+
+/* Dark theme: default, same with root parameters */
+html[data-theme='dark'] {
+  --color-background:                     hsl(210, 30%, 10%)  ; /* Page background */
+  --color-surface:                        hsl(210, 10%, 15%)  ; /* Containers, forms, tables, navigation backgrounds */
+  --color-text:                           hsl(0, 0%, 90%)     ; /* Texts */
+}
+
 *,
 body {
   margin: 0;

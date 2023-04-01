@@ -1,23 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link'
+import React, { useState, useEffect, useRef, useContext } from 'react';
+
 import MobileMenu from '@/components/mobile-menu/mobile-menu'
 import MobileButton from '@/components/mobile-button/mobile-button'
 import Button from '@/components/button/button'
 import Navigation from '@/components/parts/navigation'
 
-import { useTheme } from '../../context/theme.js'
+import { ThemeContext } from '../../context/theme.js'
 
 export default function Header() {
-  const { theme, setTheme } = useTheme();
-
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const [menuState, setMenuState] = useState(false)
   const [style, setStyle] = useState([".menu", "bg"])
   const isMounted = useRef(false)
-  const toggleTheme = () => {
-    (theme === 'light')
-      ? setTheme('dark')
-      : setTheme('light');
-  }
 
   useEffect(() => {
     const toggleStyle = () => {
@@ -42,15 +36,11 @@ export default function Header() {
         <MobileMenu menuState={menuState} setMenuState={setMenuState} />
         <div id="topbar">
           <div id="mobilebutton">
-            <MobileButton onClick={() => (
-              menuState === false
-              ? setMenuState(true)
-              : setMenuState(false)
-              )} />
+            <MobileButton onClick={() => toggleTheme()} />
           </div>
           <Navigation id="topnav" className="navigation__vertical" />
           <div id="topbuttons">
-            <Button className="primary" onClick={() => toggleTheme()}>{theme}</Button>
+            <Button className="primary" onClick={ () => toggleTheme() } > { theme } </Button>
             <Button className="primary">Sign up</Button>
           </div>
         </div>
