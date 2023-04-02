@@ -189,12 +189,10 @@ a {
   padding: 0 0 0px 0;
   border-bottom: 1px solid;
   border-radius: 0;
-  transition: .1s;
 }
 a:hover { 
   color: var(--color-link-hover);
   border-bottom: none;
-  transition: .1s;
 }
 
 /* Navigation Links */
@@ -257,6 +255,7 @@ form textarea {
   outline:        none; 
   padding:        8px;
   transition:     var(--transition);
+  font-size:      inherit;
 }
 form textarea {
   padding:        8px;
@@ -350,9 +349,10 @@ td:last-child {
 #topbuttons {
   display: flex;
   right:0;
-  padding: inherit;}
+  padding: inherit;
+  gap: var(--space-4)}
 #topbuttons button {
-  width: 100px;
+  width: 80px;
 }
 
 #mobile-navigation { margin: 0; padding: 0}
@@ -384,9 +384,9 @@ td:last-child {
   height: 50px;}
 #hero .button:hover {
   background-color: var(--color-secondary);
-  transition: .27s;}
+  transition: var(--trasition);}
 #hero .button:hover::after {
-  transition: .27s;}
+  transition: var(--trasition);}
 
 #blog-wrapper {
   border: 1px solid rgb(212, 212, 212); }

@@ -33,10 +33,11 @@ export default function Header() {
   return (
     <>
       <header id="header">
-        <MobileMenu menuState={menuState} setMenuState={setMenuState} />
+        <MobileMenu
+          menuState={menuState} setMenuState={setMenuState} />
         <div id="topbar">
           <div id="mobilebutton">
-            <MobileButton onClick={() => toggleTheme()} />
+            <MobileButton onClick={() => menuState === false ? setMenuState(true) : setMenuState(false)} />
           </div>
           <Navigation id="topnav" className="navigation__vertical" />
           <div id="topbuttons">
