@@ -16,9 +16,7 @@ export default function Navigation({ id, className, children }) {
           {menu_items.map((menu_item) => {
             return (
               <li id={menu_item.id}>
-                <Link href={menu_item.url}>
-                  {menu_item.display}
-                </Link>
+                <Link href={menu_item.url}> {menu_item.display} </Link>
               </li>)
           })}
         </ul>

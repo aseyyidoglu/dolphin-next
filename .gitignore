@@ -1,5 +1,12 @@
 node_modules
+jspm_packages
+.npm
 next
 .next
 .env
 .DS_Store
+logs
+*.log
+npm-debug.log*
+.lock-wscript
+build/Release
