@@ -1,12 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
-import Header from '@/components/parts/header'
-import Footer from '@/components/parts/footer'
+import Layout from '@/components/layouts/default'
+
 import styles from './blog.module.css'
 
-export default function Home() {
+export default function Page() {
   const [posts, setPosts] = useState(
     [
       {
@@ -16,6 +13,7 @@ export default function Home() {
       }
     ]
   )
+  const [isLoading, setIsLoading] = useState(true)
   const [page, setPage] = useState(1)
   const [postPerPage, setPostPerPage] = useState(10)
   const [upperLimit, setUpperLimit] = useState(10)
@@ -28,7 +26,7 @@ export default function Home() {
       .then((json) => {
         setPosts(json)
       })
-    }
+      .then(setIsLoading(false))}
     return getPosts();
   }, []);
 
@@ -48,29 +46,36 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>All posts</title>
-        <meta name="description" content="List of all blog posts" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header />
       <main>
         <div id="left-sidebar">
         </div>
         <div id="main-content">
           <div id="blog" className="">
-            {posts.map((post) => {
-              return (<p>{post.title}</p>)
-            })}
+            {isLoading 
+              ? "Loading..." 
+              : posts.map((post) => {return (<p>{post.title}</p>)})
+            }
             {/*{() => paginate(postPerPage)}*/}
           </div>
         </div>
         <div id="right-sidebar">
-
         </div>
       </main>
-      <Footer />
     </>
+  )
+}
+
+Page.getLayout = function getLayout(page) {
+  return (
+    <Layout
+      title="All posts"
+      description="List of all posts"
+      tags={[
+        {name: "country", content: "australia"},
+        {name: "field", content: "field-content"}
+      ]}
+    >
+      {page}
+    </Layout>
   )
 }
