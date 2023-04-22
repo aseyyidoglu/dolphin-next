@@ -2,8 +2,16 @@ import { useState } from 'react'
 import Button from '@/components/button/button'
 import styles from './form.module.css'
 
-export default function Form({ id, title, fields, onClick, children }) {
-  const createField = (field, index, id) => {
+export default function Form(
+  {
+    id,
+    title,
+    fields,
+    onClick,
+    children
+  }) {
+  
+    const createField = (field, index, id) => {
     switch (field.type) {
       case 'button':
         return (
@@ -48,6 +56,7 @@ export default function Form({ id, title, fields, onClick, children }) {
         console.log("default");
     }
   }
+  
   return (
     <>
       <form id={id}>

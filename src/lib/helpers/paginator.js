@@ -1,19 +1,6 @@
-/* Mobile menu: toggle sidebar and blur background */
-const toggle = (is_open) => { 
-  const sidebar = document.querySelector("#menu");
-  const bg = document.querySelector("#body-bg");
-  if (is_open === 1) {
-    sidebar.style.left = "0px";
-    bg.style.display = "block";
-    bg.style.opacity = 0.3;
-  } else {
-    sidebar.style.left = "-400px";
-    bg.style.display = "none";
-    bg.style.opacity = 1;
-  }
-};
-
-/* Pagination: .paginate class wraps li items */
+/*
+Pagination: .paginate class wraps li items
+*/
 const state = { current_page: 1, total_pages: 0, len: 0, limit: 0, list: NodeList }
 const paginate = (query_string, limit) => {
   let post_list = document.querySelectorAll(query_string+" > li");
