@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link'
 
 export default function Navigation({ id, className, children }) {
-  const menu_items = [
+  const menu = [
     { display: 'Home', url: '/' },
     { display: 'Elements', url: '/elements' },
     { display: 'Blog', url: '/blog' },
@@ -13,11 +13,14 @@ export default function Navigation({ id, className, children }) {
     <>
       <nav id={id} className={className}>
         <ul>
-          {menu_items.map((menu_item) => {
+          {menu.map((item) => {
             return (
-              <li id={menu_item.id}>
-                <Link href={menu_item.url}> {menu_item.display} </Link>
-              </li>)
+              <li id={item.id}>
+                <Link href={item.url}>
+                  {item.display}
+                </Link>
+              </li>
+            )
           })}
         </ul>
         {children}

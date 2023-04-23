@@ -3,13 +3,14 @@ import React, { useEffect, createContext, useState } from "react";
 const ThemeContext = createContext();
 
 const getTheme = () => {
-  // Get theme from local storage or set it "dark" by default
+  // Get theme from local storage, set "dark" by default
   const theme = (typeof window !== 'undefined')
     ? localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
     : "dark";
-  
+
   if (!theme) {
     localStorage.setItem("theme", "dark");
+    document.documentElement.setAttribute('data-theme', "dark")
     return "dark";
   } else {
     return theme;
@@ -49,4 +50,7 @@ const ThemeProvider = ({ children }) => {
   );
 };
 
-export { ThemeContext, ThemeProvider };
+export {
+  ThemeContext,
+  ThemeProvider
+};

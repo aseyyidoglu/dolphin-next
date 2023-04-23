@@ -1,16 +1,11 @@
 import { ThemeProvider } from '@/context/theme.js'
-import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page)
   return (
     <ThemeProvider>
-      <div className={inter.className}>
-        {getLayout(<Component {...pageProps} />)}
-      </div>
+      {getLayout(<Component {...pageProps} />)}
     </ThemeProvider>
   )
 }

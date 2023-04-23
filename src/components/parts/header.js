@@ -5,7 +5,7 @@ import MobileButton from '@/components/mobile-button/mobile-button'
 import Button from '@/components/button/button'
 import Navigation from '@/components/parts/navigation'
 
-import { ThemeContext } from '../../context/theme.js'
+import { ThemeContext } from '@/context/theme.js'
 
 export default function Header() {
   const { theme, toggleTheme } = useContext(ThemeContext);
